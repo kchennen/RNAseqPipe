@@ -8,6 +8,10 @@
 
 
 help:
+	@echo "##########################################################################"
+	@echo "# RNAseq Pipeline"
+	@echo "##########################################################################"
+	@echo ""
 	@echo "-----------------------------------HELP-----------------------------------"
 	@echo "* init_project_dirs		- Init project directories."
 	@echo "* download_assets		- Download assets data."
@@ -19,8 +23,6 @@ GENOME_ASSEMBLY = GRCh38
 RELEASE_VERSION = 107
 PROJECT_PATH = $(shell  cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 WORKFLOW_PATH = $(PROJECT_PATH)/workflow
-DATA_DIRS := $(WORKFLOW_PATH)/annotation $(WORKFLOW_PATH)/genome $(WORKFLOW_PATH)/input $(WORKFLOW_PATH)/output \
-			 $(WORKFLOW_PATH)/sortmerna_db $(WORKFLOW_PATH)/star_index
 
 
 init_project_dirs:
