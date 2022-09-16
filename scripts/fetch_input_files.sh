@@ -8,9 +8,10 @@ then
     echo "USAGE: $0 <FASTQ_DIR>";
     exit 1;
 else
-    cp $1/*.fastq.gz "${INPUT_DIR}";
+    tmp_dir=($(ls $1));
+    for d in "${!tmp_dir[@]}"; do
+      cp "$1/${tmp_dir[$d]}"/*.fastq.gz "${INPUT_DIR}";
+    done
 fi;
 
 exit 0;
-
-
