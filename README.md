@@ -30,7 +30,7 @@ git clone https://github.com/kchennen/RNAseqPipe.git RAinRARE_RNAseqPipe
 ```shell
 ./scripts/rename_fastq.py -s workflow/input/samples.tsv -i workflow/input
 ```
+
+
 ## TODO
-- Create `samplefile`
-- Rename FASTQ files with `samplefile`
 - Create Snakemake pipeline
