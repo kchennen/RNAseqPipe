@@ -11,8 +11,8 @@ def parse_samples(fname, sep='\t'):
         next(fin)
         for line in fin:
             cols = line.strip().split(sep)
-            fname_mapping[cols[1]] = cols[0]
-            fname_mapping[cols[2]] = cols[0]
+            fname_mapping[cols[1]] = cols[0] + '_R1'
+            fname_mapping[cols[2]] = cols[0] + '_R2'
     return fname_mapping
 
 
