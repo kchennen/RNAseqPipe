@@ -1,3 +1,4 @@
+#! /bin/bash
 trim_galore --paired --cores 4 --quality 20 --fastqc --length 25 --output_dir ../workflow/output/2_trimmed_output ../workflow/output/1_initial_qc/U_Undetermined_X_S00_L1_R1.fastq.gz ../workflow/output/1_initial_qc/U_Undetermined_X_S00_L1_R2.fastq.gz &
 trim_galore --paired --cores 4 --quality 20 --fastqc --length 25 --output_dir ../workflow/output/2_trimmed_output ../workflow/output/1_initial_qc/U_Undetermined_X_S00_L2_R1.fastq.gz ../workflow/output/1_initial_qc/U_Undetermined_X_S00_L2_R2.fastq.gz &
 trim_galore --paired --cores 4 --quality 20 --fastqc --length 25 --output_dir ../workflow/output/2_trimmed_output ../workflow/output/1_initial_qc/half_C1_1_S06_L1_R1.fastq.gz ../workflow/output/1_initial_qc/half_C1_1_S06_L1_R2.fastq.gz &
