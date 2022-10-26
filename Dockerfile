@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:4.12.0
+FROM continuumio/miniconda3:4.8.3
 
 MAINTAINER Kirsley Chennen <kchennen@unistra.fr>
 

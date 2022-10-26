@@ -18,15 +18,29 @@ help:
 	@echo "* run		- Run package with arguments: make run ARGS='--foo bar'."
 
 
-project_name = Afac
+project_name = RAinRARE_RNAseqPipe
+project_name_lc = $(shell echo $(project_name) | tr "[:upper:]" "[:lower:]")
 GENOME_ASSEMBLY = GRCh38
 RELEASE_VERSION = 107
 PROJECT_PATH = $(shell  cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 WORKFLOW_PATH = $(PROJECT_PATH)/workflow
 
+# TODO: !!!
+init_env:
+	@mkdir -p env
+	conda create --prefix=$(PROJECT_PATH)/env/conda/$(project_name_lc)
+#   @mamba create -n $(project_name) -p $(PROJECT_PATH)/.env -f env.yaml
 
-init_project_dirs:
-	mkdir -p $(DATA_DIRS)
+export_docker_img:
+	docker build -t $(project_name_lc):v1.0 .
+	docker save $(project_name_lc):v1.0 -o $(PROJECT_PATH)/env/$(project_name_lc).tar
+
+#convert_docker2singularity:
+#	spython recipe Dockerfile env/$(project_name).def
+#	singularity build --remote env/$(project_name).sif env/$(project_name).def
+
+convert_docker2singularity:
+	singularity build $(project_name_lc)_v1.0.sif docker-archive://$(PROJECT_PATH)/env/$(project_name_lc).tar
 
 download_genome_fasta:
 	wget -c -P $(WORKFLOW_PATH)/genome/ "https://ftp.ensembl.org/pub/release-$(RELEASE_VERSION)/fasta/homo_sapiens/dna/Homo_sapiens.$(GENOME_ASSEMBLY).dna.primary_assembly.fa.gz"
