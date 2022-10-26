@@ -1,4 +1,4 @@
-name: rnaseq
+name: rainrare_rnaseqpipe
 channels:
   - bioconda
   - conda-forge
@@ -6,3 +6,4 @@ channels:
   - r
 #dependencies:
 #
+#prefix: /tempor/kchennen/RAinRARE_RNAseqPipe/.env/rainrare
