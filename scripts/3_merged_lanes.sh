@@ -22,8 +22,8 @@ zcat output/2_trimmed_output/half_C5_3_S22_L1_R2_val_2.fq.gz output/2_trimmed_ou
 zcat output/2_trimmed_output/half_Ctrl_1_S05_L1_R1_val_1.fq.gz output/2_trimmed_output/half_Ctrl_1_S05_L2_R1_val_1.fq.gz > output/3_merged_lanes/half_Ctrl_1_S05_merged_R1.fq.gz &
 zcat output/2_trimmed_output/half_Ctrl_1_S05_L1_R2_val_2.fq.gz output/2_trimmed_output/half_Ctrl_1_S05_L2_R2_val_2.fq.gz > output/3_merged_lanes/half_Ctrl_1_S05_merged_R2.fq.gz &
 zcat output/2_trimmed_output/half_Ctrl_3_S20_L1_R1_val_1.fq.gz  output/2_trimmed_output/half_Ctrl_3_S20_L2_R1_val_1.fq.gz > output/3_merged_lanes/half_Ctrl_3_S20_merged_R1.fq.gz &
-wait $!
 zcat output/2_trimmed_output/half_Ctrl_3_S20_L1_R2_val_2.fq.gz output/2_trimmed_output/half_Ctrl_3_S20_L2_R2_val_2.fq.gz > output/3_merged_lanes/half_Ctrl_3_S20_merged_R2.fq.gz &
+wait $!
 zcat output/2_trimmed_output/half_Ctrl_4_S27_L1_R1_val_1.fq.gz output/2_trimmed_output/half_Ctrl_4_S27_L2_R1_val_1.fq.gz > output/3_merged_lanes/half_Ctrl_4_S27_merged_R1.fq.gz &
 zcat output/2_trimmed_output/half_Ctrl_4_S27_L1_R2_val_2.fq.gz output/2_trimmed_output/half_Ctrl_4_S27_L2_R2_val_2.fq.gz > output/3_merged_lanes/half_Ctrl_4_S27_merged_R2.fq.gz &
 zcat output/2_trimmed_output/half_Nas2_2_S13_L1_R1_val_1.fq.gz output/2_trimmed_output/half_Nas2_2_S13_L2_R1_val_1.fq.gz > output/3_merged_lanes/half_Nas2_2_S13_merged_R1.fq.gz &
